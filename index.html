@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cines Unidos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c5f3b0fc79.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="top-nav" id="top-nav">
+            <div class="container">
+                <div class="top-nav__links" id="slider-menu-container">
+                    <div class="my-account my-account--show" id="my-account-container">
+                        <a class="sign-in" id="sign-in">INICIAR SESION</a>
+                        <a class="sign-up" id="sign-up">REGISTRARSE</a>
+                    </div>
+                        <a href="#" class="top-nav__link">INICIO</a>
+                        <a href="#" class="top-nav__link">PROXIMOS ESTRENOS</a>
+                        <a href="#" class="top-nav__link">PUBLICIDAD Y EVENTOS</a>
+                        <a href="#" class="top-nav__link">PROMOCIONES Y PRECIOS</a>
+                        <a href="#" class="top-nav__link" id="my-account-btn">MI CUENTA <i class="fa-solid fa-angle-down"></i></a>
+                        <a href="#" class="top-nav__link">CONTACTO</a>
+                </div>
+                <div class="social-media">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-apple"></i></a>
+                        <a href="#"><i class="fa-brands fa-android"></i></a>
+                </div>
+                <a href="#" id="top-nav__menu" class="top-nav__menu"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </nav>
+        <nav class="bottom-nav" id="bottom-nav">
+            <div class="container">
+                <div class="bottom-nav__logo">
+                    <img src="images/CinesUnidosLogo.png" alt="" class="bottom-nav__img">
+                </div>
+                <div class="bottom-nav__city" id="selectBox">
+                    <h2 class="active-city" id="current-city">CARACAS</h2>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-movies">
+            <div class="container">
+                <div class="cities cities--show" id="cities">
+                    <p class="city" id="barquisimeto">BARQUISIMETO</p>
+                    <p class="city" id="caracas">CARACAS</p>
+                    <p class="city" id="guatire">GUATIRE</p>
+                    <p class="city" id="maracaibo">MARACAIBO</p>
+                    <p class="city" id="maracay">MARACAY</p>
+                    <p class="city" id="margarita">MARGARITA</p>
+                    <p class="city" id="maturin">MATURIN</p>
+                    <p class="city" id="puerto-la-cruz">PUERTO LA CRUZ</p>
+                    <p class="city" id="puerto-ordaz">PUERTO ORDAZ</p>
+                    <p class="city" id="san-cristobal">SAN CRISTOBAL</p>
+                    <p class="city city--borderNone" id="valencia">VALENCIA</p>
+                </div>
+
+                <div class="main-movies-top">
+                    <div class="main-movies-top-left__movies grid-item1">
+                        <div class="texts">
+                            <img src="images/peliculasIcon.png" alt="">
+                            <h2 class="title">PELICULAS</h2>
+                        </div>
+                    </div>
+                    <div class="main-movies-top-left__cinemas grid-item2">
+                        <div class="texts">
+                            <img src="images/cinesIcon.png" alt="">
+                            <h2 class="title">CINES</h2>
+                        </div>
+                    </div>
+                    <div class="main-movies-top-left__premieres grid-item3">
+                        <div class="texts">
+                            <img src="images/estrenosIcon.png" alt="">
+                            <h2 class="title">PROXIMOS ESTRENOS</h2>
+                        </div>
+                    </div>
+                    <div class="carrousel-container grid-item4" id="carrousel">
+
+                        <button class="carrousel-container__before" id="before"><i class="fa-solid fa-angle-left"></i></button>
+
+                        <div class="slider" id="slider">
+                                <div class="slider__img">
+                                    <img src="images/Ambulancia.jpg" class="slider__movie" alt="">
+                                </div>
+
+                                <div class="slider__img">
+                                    <img src="images/El Exorcismo de Dios.jpg" class="slider__movie" alt="">
+                                </div>
+
+                                <div class="slider__img">
+                                    <img src="images/Uncharted.jpg" class="slider__movie" alt="">
+                                </div>
+
+                                <div class="slider__img">
+                                    <img src="images/Batman.jpg" class="slider__movie" alt="">
+                                </div>
+
+                                <div class="slider__img">
+                                    <img src="images/Sing2.jpg" class="slider__movie" alt="">
+                                </div>
+
+                                <div class="slider__img">
+                                    <img src="images/Spiderman De Regreso a Casa.jpg" class="slider__movie" alt="">
+                                </div>
+                        </div>
+                        
+                        <button class="carrousel-container__next" id="next"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="main-movies-bottom">
+                    <img src="images/lasBodasDeFigaro.jpg" alt="">
+                    <a href="#"><img src="images/bannerQuiniela.jpg" alt=""></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="advertising">
+            <div class="container">
+                <article class="advertising__img grid1">
+                    <img src="images/laCasaMaldita.jpg" alt="">
+                </article>
+                <article class="advertising__img grid2">
+                    <img src="images/SalaSoloParaTi.jpg" alt="">
+                </article>
+                <article class="advertising__img grid3" id="advertising__img--current">
+                    <img src="images/ComboParaDos.jpg" alt="">
+                </article>
+                <article class="advertising__img grid4 advertising__img--show" id="advertising__img--next">
+                    <img src="images/miscompras.jpg" alt="">
+                </article>
+            </div>
+        </section>
+
+        <section class="movies-gallery">
+            <div class="container">
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster1.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster2.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster3.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster4.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster5.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster6.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster7.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster8.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster9.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster10.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster11.jpg" alt=""></a>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="images/Movies Posters/moviePoster12.jpg" alt=""></a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/CinesUnidosLogo.png" alt="">
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-apple"></i></a>
+                <a href="#"><i class="fa-brands fa-android"></i></a>
+            </div>
+            <div class="about-us-links">
+                    <a href="#" class="about-us__link">INICIO</a>
+                    <a href="#" class="about-us__link">PROXIMOS ESTRENOS</a>
+                    <a href="#" class="about-us__link">MI CUENTA</a>
+            </div>
+            <div class="copyright">
+                    <P class="copyright__info">
+                        © CopyRight 2015. Todos los derechos reservados. Compañía Anónima Empresa Cines Unidos. RIF.:J-00012651-8
+                    </P>
+            </div>
+        </div>
+    </footer>
+
+    <button class="go-up-arrow" id="go-up-arrow"><i class="fa-solid fa-angle-up"></i></button>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/sliderEfect.js"></script>
+    <script src="js/selectBox.js"></script>
+    <script src="js/advertising.js"></script>
+    <script src="js/sliderMenu.js"></script>
+</body>
+</html>

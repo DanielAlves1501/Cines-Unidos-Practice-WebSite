@@ -1,0 +1,430 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #000;
+  color: #fff; }
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
+  overflow: hidden; }
+
+.social-media a {
+  color: #e4e4e4;
+  margin-left: 20px; }
+  .social-media a:hover {
+    color: #c2c20b; }
+
+header .top-nav {
+  width: 100%;
+  background: #222222;
+  position: fixed;
+  border-top: 2px solid #4a4a4a;
+  border-bottom: 2px solid #4a4a4a;
+  padding: 10px 0;
+  z-index: 1000; }
+  header .top-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: visible; }
+    header .top-nav .container .top-nav__menu {
+      background: #4a4a4a;
+      padding: 5px 10px;
+      font-size: 12px;
+      color: #e4e4e4;
+      border-radius: 3px;
+      display: none; }
+    header .top-nav .container .top-nav__links {
+      position: relative;
+      z-index: 1000; }
+      header .top-nav .container .top-nav__links .top-nav__link {
+        color: #9d9d9d;
+        font-size: 12px;
+        text-decoration: none;
+        margin-right: 15px; }
+        header .top-nav .container .top-nav__links .top-nav__link:hover {
+          color: #e4e4e4; }
+      header .top-nav .container .top-nav__links .my-account {
+        position: absolute;
+        z-index: 1000;
+        background: #fff;
+        padding: 5px;
+        color: #000;
+        font-size: 14px;
+        text-align: center;
+        right: 15px;
+        top: 33px; }
+        header .top-nav .container .top-nav__links .my-account a {
+          padding: 5px 25px;
+          display: block;
+          cursor: pointer; }
+        header .top-nav .container .top-nav__links .my-account .sign-in {
+          background: #c02328;
+          color: #e4e4e4; }
+          header .top-nav .container .top-nav__links .my-account .sign-in:hover {
+            color: #fff; }
+        header .top-nav .container .top-nav__links .my-account .sign-up {
+          color: #4a4a4a; }
+          header .top-nav .container .top-nav__links .my-account .sign-up:hover {
+            color: #c02328; }
+header .bottom-nav {
+  background: #c02328;
+  width: 100%;
+  position: relative;
+  top: 46px;
+  padding: 5px 0;
+  margin-bottom: 46px; }
+  header .bottom-nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: visible; }
+    header .bottom-nav .container .bottom-nav__city {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer; }
+      header .bottom-nav .container .bottom-nav__city .active-city {
+        font-weight: 400;
+        font-size: 28px;
+        margin-right: 5px;
+        cursor: pointer; }
+        header .bottom-nav .container .bottom-nav__city .active-city:hover {
+          color: #e4e4e4; }
+      header .bottom-nav .container .bottom-nav__city i {
+        font-size: 24px;
+        cursor: pointer; }
+        header .bottom-nav .container .bottom-nav__city i:hover {
+          color: #e4e4e4; }
+
+.my-account--show {
+  display: none; }
+
+main .main-movies {
+  position: relative;
+  top: 10px;
+  z-index: 1;
+  margin-bottom: 20px; }
+  main .main-movies .container {
+    overflow: visible;
+    position: relative; }
+    main .main-movies .container .cities {
+      background: #fff;
+      width: 175px;
+      position: absolute;
+      z-index: 100;
+      right: 0px;
+      top: -10px;
+      padding: 5px 5px;
+      z-index: 1000; }
+      main .main-movies .container .cities .city {
+        color: #c02328;
+        text-align: right;
+        border-bottom: 1px solid #c02328;
+        padding-right: 8px;
+        cursor: pointer; }
+        main .main-movies .container .cities .city:hover {
+          background: #c02328;
+          color: #fff; }
+      main .main-movies .container .cities .city--borderNone {
+        border-bottom: none; }
+    main .main-movies .container .main-movies-top {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-template-rows: repeat(3, 141px);
+      z-index: 1; }
+      main .main-movies .container .main-movies-top .grid-item1 {
+        grid-column: 1/2;
+        grid-row: 1/2; }
+      main .main-movies .container .main-movies-top .grid-item2 {
+        grid-column: 1/2;
+        grid-row: 2/3; }
+      main .main-movies .container .main-movies-top .grid-item3 {
+        grid-column: 1/2;
+        grid-row: 3/4; }
+      main .main-movies .container .main-movies-top .grid-item4 {
+        grid-column: 2/3;
+        grid-row: 1/4; }
+      main .main-movies .container .main-movies-top .main-movies-top-left__movies,
+      main .main-movies .container .main-movies-top .main-movies-top-left__cinemas,
+      main .main-movies .container .main-movies-top .main-movies-top-left__premieres {
+        background: #c02328;
+        background: linear-gradient(180deg, #c02328 0%, #8d0608 100%);
+        border: 1px solid #9d9d9d;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .3s ease; }
+        main .main-movies .container .main-movies-top .main-movies-top-left__movies:hover,
+        main .main-movies .container .main-movies-top .main-movies-top-left__cinemas:hover,
+        main .main-movies .container .main-movies-top .main-movies-top-left__premieres:hover {
+          box-shadow: 0px 0px 30px #000; }
+          main .main-movies .container .main-movies-top .main-movies-top-left__movies:hover img,
+          main .main-movies .container .main-movies-top .main-movies-top-left__cinemas:hover img,
+          main .main-movies .container .main-movies-top .main-movies-top-left__premieres:hover img {
+            border: 2px solid #fff;
+            padding: 5px;
+            box-shadow: 0px 0px 10px #fff; }
+          main .main-movies .container .main-movies-top .main-movies-top-left__movies:hover .title,
+          main .main-movies .container .main-movies-top .main-movies-top-left__cinemas:hover .title,
+          main .main-movies .container .main-movies-top .main-movies-top-left__premieres:hover .title {
+            text-shadow: 0px 0px 5px #fff; }
+        main .main-movies .container .main-movies-top .main-movies-top-left__movies .texts img,
+        main .main-movies .container .main-movies-top .main-movies-top-left__cinemas .texts img,
+        main .main-movies .container .main-movies-top .main-movies-top-left__premieres .texts img {
+          border-radius: 100%;
+          transition: all .3s ease; }
+        main .main-movies .container .main-movies-top .main-movies-top-left__movies .texts .title,
+        main .main-movies .container .main-movies-top .main-movies-top-left__cinemas .texts .title,
+        main .main-movies .container .main-movies-top .main-movies-top-left__premieres .texts .title {
+          font-size: 22px;
+          transition: all .3s ease; }
+    main .main-movies .container .carrousel-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative; }
+      main .main-movies .container .carrousel-container .slider {
+        width: 100%;
+        display: flex;
+        height: 100%; }
+        main .main-movies .container .carrousel-container .slider .slider__img {
+          min-width: 100%;
+          height: 100%; }
+          main .main-movies .container .carrousel-container .slider .slider__img img {
+            z-index: 1;
+            width: 100%;
+            height: 100%; }
+      main .main-movies .container .carrousel-container .carrousel-container__before,
+      main .main-movies .container .carrousel-container .carrousel-container__next {
+        position: absolute;
+        border: none;
+        background: none;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 42px;
+        font-weight: 700;
+        top: 50%;
+        text-shadow: 1px 1px 5px #000;
+        z-index: 500;
+        cursor: pointer; }
+        main .main-movies .container .carrousel-container .carrousel-container__before:hover,
+        main .main-movies .container .carrousel-container .carrousel-container__next:hover {
+          color: white; }
+        main .main-movies .container .carrousel-container .carrousel-container__before:active,
+        main .main-movies .container .carrousel-container .carrousel-container__next:active {
+          color: #000; }
+      main .main-movies .container .carrousel-container .carrousel-container__before {
+        left: 30px; }
+      main .main-movies .container .carrousel-container .carrousel-container__next {
+        right: 30px; }
+    main .main-movies .container .main-movies-bottom {
+      width: 100%; }
+      main .main-movies .container .main-movies-bottom img {
+        width: 100%;
+        vertical-align: top; }
+
+.cities--show {
+  display: none; }
+
+.current-city--active {
+  color: #000; }
+
+main .advertising {
+  margin-bottom: 10px; }
+  main .advertising .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; }
+    main .advertising .container .advertising__img img {
+      vertical-align: top;
+      width: 100%;
+      height: 100%; }
+    main .advertising .container .grid1 {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    main .advertising .container .grid2 {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+    main .advertising .container .grid3 {
+      grid-column: 3/4;
+      grid-row: 1/2; }
+    main .advertising .container .grid4 {
+      grid-column: 3/4;
+      grid-row: 1/2; }
+
+.advertising__img--show {
+  display: none; }
+
+main .movies-gallery {
+  margin-bottom: 10px; }
+  main .movies-gallery .container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible; }
+    main .movies-gallery .container .movie {
+      width: 25%;
+      box-shadow: 0px 0px 5px #9d9d9d;
+      background: transparent;
+      transition: all .3s ease; }
+      main .movies-gallery .container .movie:hover {
+        transform: translate(10px, -10px);
+        opacity: .8; }
+      main .movies-gallery .container .movie img {
+        cursor: pointer;
+        background: transparent;
+        width: 100%;
+        vertical-align: top; }
+
+footer {
+  background: #414141;
+  background: linear-gradient(180deg, #414141 0%, black 100%); }
+  footer .container {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    footer .container .footer-logo {
+      margin-bottom: 10px; }
+    footer .container .social-media {
+      margin-bottom: 40px; }
+      footer .container .social-media a {
+        font-size: 22px;
+        margin: 0 20px; }
+    footer .container .about-us-links .about-us__link {
+      text-decoration: none;
+      color: #e4e4e4;
+      font-size: 12px;
+      margin: 0 10px; }
+      footer .container .about-us-links .about-us__link:hover {
+        color: #fff; }
+    footer .container .copyright .copyright__info {
+      font-size: 12px;
+      color: #9d9d9d; }
+
+.go-up-arrow {
+  position: fixed;
+  z-index: 500;
+  right: 40px;
+  bottom: -20px;
+  background: #414141;
+  background: linear-gradient(180deg, #414141 0%, black 100%);
+  color: #e4e4e4;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 100%;
+  padding: 15px 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s ease; }
+  .go-up-arrow:active {
+    color: #000; }
+
+@media screen and (max-width: 1050px) {
+  header .top-nav .container .top-nav__links {
+    width: 100%;
+    text-align: center; }
+    header .top-nav .container .top-nav__links .my-account {
+      right: 170px; }
+  header .top-nav .container .social-media {
+    display: none; }
+
+  main .main-movies .container .main-movies-top {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 141px 1fr; }
+    main .main-movies .container .main-movies-top .grid-item1 {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    main .main-movies .container .main-movies-top .grid-item2 {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+    main .main-movies .container .main-movies-top .grid-item3 {
+      grid-column: 3/4;
+      grid-row: 1/2; }
+    main .main-movies .container .main-movies-top .grid-item4 {
+      grid-column: 1/4;
+      grid-row: 2/3; }
+  main .advertising .container {
+    grid-template-columns: 80px 1fr 1fr 80px;
+    grid-template-rows: 300px 1fr;
+    gap: 10px; }
+    main .advertising .container .grid1 {
+      grid-column: 2/3; }
+    main .advertising .container .grid3,
+    main .advertising .container .grid4 {
+      grid-column: 3/4; }
+    main .advertising .container .grid2 {
+      grid-column: 1/5;
+      grid-row: 2/3; }
+  main .movies-gallery .container .movie {
+    width: 33%; } }
+@media screen and (max-width: 800px) {
+  header .top-nav .container .top-nav__links {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: #222222;
+    padding-left: 45px;
+    padding-top: 10px;
+    border-top: 1px solid #4a4a4a;
+    border-bottom: 1px solid #4a4a4a;
+    box-shadow: 0px 0px 5px #000;
+    transition: transform .3s ease; }
+    header .top-nav .container .top-nav__links .top-nav__link {
+      font-size: 10px;
+      margin-bottom: 21px; }
+    header .top-nav .container .top-nav__links .my-account {
+      right: 61%;
+      top: 50%; }
+  header .top-nav .container .social-media {
+    display: block; }
+    header .top-nav .container .social-media a {
+      background: #4a4a4a;
+      padding: 5px 10px;
+      font-size: 12px;
+      margin: 0; }
+  header .top-nav .container .top-nav__menu {
+    display: block; }
+  header .bottom-nav {
+    top: 51px; }
+
+  main .advertising .container {
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: repeat(3, 1fr); }
+    main .advertising .container .grid1 {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+    main .advertising .container .grid3,
+    main .advertising .container .grid4 {
+      grid-column: 2/3;
+      grid-row: 2/3; }
+    main .advertising .container .grid2 {
+      grid-column: 2/3;
+      grid-row: 3/4; } }
+@media screen and (max-width: 550px) {
+  header .bottom-nav .container {
+    justify-content: center; }
+    header .bottom-nav .container .bottom-nav__city {
+      width: 100%;
+      justify-content: end; }
+
+  main .movies-gallery .container .movie {
+    width: 50%; } }
+
+/*# sourceMappingURL=estilos.css.map */
