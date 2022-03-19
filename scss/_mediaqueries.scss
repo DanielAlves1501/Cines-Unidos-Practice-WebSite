@@ -1,0 +1,141 @@
+@media screen and (max-width: 1050px) {
+    header{
+        .top-nav{
+            .container{
+                .top-nav__links{
+                    width: 100%;
+                    text-align: center;
+                    .my-account{
+                        right: 170px;
+                    }
+                }
+                .social-media{
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    main{
+        .main-movies{
+            .container{
+                .main-movies-top{
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows:141px 1fr;
+                    .grid-item1{
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                    }
+                    .grid-item2{
+                        grid-column: 2/3;
+                        grid-row: 1/2;
+                    }
+                    .grid-item3{
+                        grid-column: 3/4;
+                        grid-row: 1/2;
+                    }
+                    .grid-item4{
+                        grid-column: 1/4;
+                        grid-row: 2/3;
+                    }
+                }
+            }
+        }
+
+        .advertising{
+            .container{
+                grid-template-columns: 80px 1fr 1fr 80px;
+                grid-template-rows: 300px 1fr;
+                gap: 10px;
+                .grid1{
+                    grid-column: 2/3;
+                }
+                .grid3,
+                .grid4{
+                    grid-column: 3/4;
+                }
+                .grid2{
+                    grid-column: 1/5;
+                    grid-row: 2/3;
+                }
+            }
+        }
+
+        .movies-gallery{
+            .container{
+                .movie{
+                    width: 33%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+   header{
+       .top-nav{
+           .container{
+               .top-nav__links{
+                   position: absolute;
+                   display: none;
+                   flex-direction: column;
+                   text-align: left;
+                   top: 100%;
+                   left: 0;
+                   background: $top-nav-background;
+                   padding-left: 45px;
+                   padding-top: 10px;
+                   border-top: 1px solid $top-nav-border ;
+                   border-bottom: 1px solid $top-nav-border ;
+                   box-shadow: 0px 0px 5px #000;
+                   transition: transform .3s ease;
+                   .top-nav__link{
+                       font-size: 10px;
+                       margin-bottom: 21px;
+                   }
+                   .my-account{
+                       right: 61%;
+                       top: 50%;
+                   }
+                }
+               .social-media{
+                   display: block;
+                    a{
+                        background: $top-nav-border;
+                        padding: 5px 10px;
+                        font-size: 12px;
+                        margin: 0;
+                    }
+               }
+               .top-nav__menu{
+                   display: block;
+               }
+           }
+       }
+       .bottom-nav{
+           top: 51px;
+       }
+   }
+   
+    main{
+        .advertising{
+            .container{
+                grid-template-columns: 40px 1fr 40px ;
+                grid-template-rows: repeat(3,1fr);
+                .grid1{
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                .grid3,
+                .grid4{
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                }
+                .grid2{
+                    grid-column: 2/3;
+                    grid-row: 3/4;
+                }
+            }
+        }
+    }
+}

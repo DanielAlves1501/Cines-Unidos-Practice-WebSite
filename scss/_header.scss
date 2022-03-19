@@ -1,0 +1,112 @@
+
+
+header{
+    .top-nav{
+        width: 100%;
+        background: $top-nav-background;
+        position: fixed;
+        border-top: 2px solid $top-nav-border;
+        border-bottom: 2px solid $top-nav-border;
+        padding: 10px 0;
+        z-index:1000;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: visible;
+            .top-nav__menu{
+                background: $top-nav-border;
+                padding: 5px 10px;
+                font-size: 12px;
+                color: $social-icons-color;
+                border-radius: 3px ;
+                display: none;
+               }
+            .top-nav__links{
+                position: relative;
+                z-index: 1000;
+                .top-nav__link{
+                    color: $top-nav-font-color;
+                    font-size: 12px;
+                    text-decoration: none;
+                    margin-right:15px;
+                    &:hover{
+                        color: $social-icons-color;
+                    }
+                }
+                .my-account{
+                    position: absolute;
+                    z-index: 1000;
+                    background: $white;
+                    padding: 5px;
+                    color: #000;
+                    font-size: 14px;
+                    text-align: center;
+                    right: 15px;
+                    top: 33px;
+                    a{
+                        padding: 5px 25px;
+                        display: block;
+                        cursor: pointer;
+                    }
+                    .sign-in{
+                        background: $bottom-nav-background;
+                        color: $social-icons-color;
+                        &:hover{
+                            color: $white;
+                        }
+                    }
+                    .sign-up{
+                        color: $top-nav-border;
+                        &:hover{
+                            color: $bottom-nav-background;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom-nav{
+        background:$bottom-nav-background;
+        width: 100%;
+        position: relative;
+        top: 46px;
+        padding: 5px 0;
+        margin-bottom: 46px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: visible;
+            .bottom-nav__city{
+                display: flex;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                .active-city{
+                    font-weight: 400;
+                    font-size: 28px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    &:hover{
+                        color: $social-icons-color;
+                    }
+                }
+                i{
+                    font-size: 24px;
+                    cursor: pointer;
+                    &:hover{
+                        color: $social-icons-color;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.my-account--show{
+    display: none;
+}
