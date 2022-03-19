@@ -15,3 +15,7 @@ $(window).on('scroll', function(){
         topNav.css({top: '0'});
     }
 });
+
+if($(window).width() <= 800){
+  $('.main-movies .title').css({fontSize:'16px'});
+}
